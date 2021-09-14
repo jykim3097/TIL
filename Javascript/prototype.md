@@ -27,8 +27,7 @@
 		* constructor는 Prototype Object와 같이 생성된 함수를 가리키고,
 		* __proto__는 **Prototype Link**이다
 
-#### prototype 속성은 함수만 갖고 있지만
-#### __proto__ 속성은 모든 객체가 갖고 있는 속성이다
+#### prototype 속성은 함수만 갖고 있지만  __proto__ 속성은 모든 객체가 갖고 있는 속성이다
 
 * 그래서 __proto__는 객체가 생성될 때 조상이었던 함수의 Prototype Object를 가리킨다
 	* 함수로부터 생성된 객체가 어떤 속성을 갖고 있지 않더라고, 그 속성을 찾을 때까지 상위 prototype을 탐색해서 결과를 반환한다
@@ -39,4 +38,4 @@
 * 이런 Prototype Chain 구조 때문에 모든 객체는 Object의 자식이라고 불린다
 
 
->> 참고 : https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67
+> 참고 : https://medium.com/@bluesh55/javascript-prototype-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-f8e67c286b67

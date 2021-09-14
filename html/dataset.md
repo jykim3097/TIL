@@ -1,7 +1,7 @@
 # data attribute (dataset)
 
 * html5부터 추가된 Data 속성
-* html 요소의 **data-**로 시작하는 속성이다
+* html 요소의 "data-"로 시작하는 속성이다
 * 특정 데이터를 DOM 요소에 저장해두기 위해 데이터 속성을 사용한다
 
 ## 장점
