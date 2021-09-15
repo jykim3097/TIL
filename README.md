@@ -8,6 +8,7 @@ TIL; Today I Learned 🧐
 
 #### Javascript
 * prototype 210914
+* 함수 표현식과 함수 선언식 210915
 
 #### html
 * dataset 210914
