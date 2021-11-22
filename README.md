@@ -5,6 +5,7 @@ TIL; Today I Learned 🧐
 #### Sql
 * Mysql, MariaDB
 * delete와 truncate 210912
+* 중복 레코드 관리 211109
 * INSERT INTO SELECT 구문 211110
 
 #### Javascript
