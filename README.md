@@ -5,6 +5,7 @@ TIL; Today I Learned 🧐
 #### Sql
 * Mysql, MariaDB
 * delete와 truncate 210912
+* INSERT INTO SELECT 구문 211110
 
 #### Javascript
 * prototype 210914
