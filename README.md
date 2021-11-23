@@ -2,6 +2,8 @@
 TIL; Today I Learned 🧐
 
 ### 공부한 내용
+#### Java
+* 스프링 의존객체 주입 (DI) 방법 211021
 #### Sql
 * Mysql, MariaDB
 * delete와 truncate 210912
