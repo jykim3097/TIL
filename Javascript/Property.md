@@ -4,16 +4,10 @@
 - 마치 감자처럼 실행 컨텍스트까지 공부하게 됐다는 story..
 - Property 공부도 그 과정 중에 있었다 😊 (nodeType property에서 시작된 또 하나의 감자)
 - 참조한 페이지는 아래와 같고, 이 페이지들을 망라해서 정리해보고자 한다.
-    
     > [https://ko.wikipedia.org/wiki/프로퍼티_(프로그래밍)](https://ko.wikipedia.org/wiki/%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D))
-    > 
-    
     > [https://m.blog.naver.com/magnking/220966405605](https://m.blog.naver.com/magnking/220966405605)
-    > 
-    
     > [https://byul91oh.tistory.com/167](https://byul91oh.tistory.com/167)
-    > 
-
+  
 # 정의를 정리해보자
 
 ## 위키백과ver.
@@ -46,25 +40,25 @@
     - 함수를 담고 있는 프로퍼티를 메소드라고 부르기 때문이다
     
 
-```jsx
-// 객체 선언
-var person = {name: "jiyoung"}
+    ```jsx
+    // 객체 선언
+    var person = {name: "jiyoung"}
 
-// property 접근
-console.log(person.name); // jiyoung
+    // property 접근
+    console.log(person.name); // jiyoung
 
-// property 수정
-person.name = "jiwon";
-console.log(person.name); // jiwon
+    // property 수정
+    person.name = "jiwon";
+    console.log(person.name); // jiwon
 
-// property 추가
-person.age = 20;
-console.log(person.age); // 20
+    // property 추가
+    person.age = 20;
+    console.log(person.age); // 20
 
-// property 삭제
-delete person.age;
-console.log(person.age); // undefined
-```
+    // property 삭제
+    delete person.age;
+    console.log(person.age); // undefined
+    ```
 
 # Property의 6가지 특징
 
