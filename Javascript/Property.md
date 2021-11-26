@@ -4,8 +4,8 @@
 - 마치 감자 캐는 것처럼 개념들이 우수수 딸려나와 실행 컨텍스트까지 공부하게 됐다는 story..
 - Property 공부도 그 과정 중에 있었다 😊 (nodeType property에서 시작된 또 하나의 감자)
 - 참조한 페이지는 아래와 같고, 이 페이지들을 망라해서 정리해보고자 한다.
-    > [위키피디아](https://ko.wikipedia.org/wiki/%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D))
-    > [쉽게 읽는 프로그래밍](https://m.blog.naver.com/magnking/220966405605)
+    > [위키피디아](https://ko.wikipedia.org/wiki/%ED%94%84%EB%A1%9C%ED%8D%BC%ED%8B%B0_(%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D))  
+    > [쉽게 읽는 프로그래밍](https://m.blog.naver.com/magnking/220966405605)  
     > [개발하는 감자](https://byul91oh.tistory.com/167)
   
 # 정의를 정리해보자
@@ -37,7 +37,7 @@
 - length는 문자열이 담고 있는 문자의 양을 의미하는 대표적인 property이다.
 - 객체(object)와 연관된 값을 담는 유형으로 변수와 비슷한 느낌을 준다
 - 객체에 정의된 일반적인 property가 아닌 function을 담고 있는 값은 property이면서 method이다
-    - 함수를 담고 있는 프로퍼티를 메소드라고 부르기 때문이다
+    - 함수를 담고 있는 프로퍼티를 메소드라고 부르기 때문이다  
     
     ```jsx
     // 객체 선언
