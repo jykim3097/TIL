@@ -38,26 +38,26 @@
 - 객체(object)와 연관된 값을 담는 유형으로 변수와 비슷한 느낌을 준다
 - 객체에 정의된 일반적인 property가 아닌 function을 담고 있는 값은 property이면서 method이다
     - 함수를 담고 있는 프로퍼티를 메소드라고 부르기 때문이다  
-    
-    ```jsx
-    // 객체 선언
-    var person = {name: "jiyoung"}
+        
+        ```jsx
+        // 객체 선언
+        var person = {name: "jiyoung"}
 
-    // property 접근
-    console.log(person.name); // jiyoung
+        // property 접근
+        console.log(person.name); // jiyoung
 
-    // property 수정
-    person.name = "jiwon";
-    console.log(person.name); // jiwon
+        // property 수정
+        person.name = "jiwon";
+        console.log(person.name); // jiwon
 
-    // property 추가
-    person.age = 20;
-    console.log(person.age); // 20
+        // property 추가
+        person.age = 20;
+        console.log(person.age); // 20
 
-    // property 삭제
-    delete person.age;
-    console.log(person.age); // undefined
-    ```
+        // property 삭제
+        delete person.age;
+        console.log(person.age); // undefined
+        ```
 
 # Property의 6가지 특징
 
