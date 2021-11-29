@@ -15,6 +15,7 @@ TIL; Today I Learned 🧐
 * 함수 표현식과 함수 선언식 210915
 * node와 element 211124
 * Property의 정의와 속성 211125
+* Lexical Scope 211129
 
 #### html
 * dataset 210914

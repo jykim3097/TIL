@@ -1,10 +1,8 @@
 # Lexical Scope (Static Scope)
 - 지난주, Scope Chain을 공부하던 중 Lexical Scope에 대한 개념을 새로 알게 되어 정리하고자 한다
 - 구글링 및 아래 블로그를 참조해 공부했다.
-    
     > [https://ljtaek2.tistory.com/145](https://ljtaek2.tistory.com/145)
-    > 
-
+-------------------------
 - Lexical의 사전적 의미 : **어휘, 본질적인 것 그 자체**
 - 정적 스코프(Static Scope)라고도 한다
 - JS는 Lexical Scope를 따르는데, 이는

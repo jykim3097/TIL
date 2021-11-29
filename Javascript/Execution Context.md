@@ -47,7 +47,7 @@
     
 - 위 코드를 실행하면 아래와 같은 실행 컨텍스트 스택이 생성되고 소멸한다.
     
-    ![실행컨텍스트.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/500fc572-1e32-4bde-ba93-6ae585d0a09e/실행컨텍스트.png)
+    ![실행컨텍스트](./img/실행컨텍스트.png)
     
     1. 컨트롤이 실행 가능한 코드로 이동하면, 논리적 스택 구조를 가지는 새로운 실행 컨텍스트 스택(Execute Context Stack)이 생성된다
     2. 컨트롤이 전역코드로 진입하면 전역 컨텍스트가 생성되고, 스택에 실행 컨텍스트 스택에 쌓인다
@@ -86,13 +86,13 @@
     - 모든 전역 변수와 전역 함수 등을 포함한다
     - 전역에 선언된 전역 변수와 전역 함수를 프로퍼티로 갖는다
         
-        ![전역컨텍스트.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d1784ae2-38a1-46a3-83b6-342174742f74/전역컨텍스트.png)
+        ![전역컨텍스트](./img/전역컨텍스트.png)
         
 - 활성 객체(Activation Object, AO)
     - 함수 컨텍스트가 가리키는 객체로, 전역 객체와 달리 arguments object가 있다.
     - arguments object는 매개변수와 인수들의 정보를 담고 있는 배열이다
         
-        ![함수컨텍스트.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2120ebad-e30c-4b0c-9723-bd709e460c31/함수컨텍스트.png)
+        ![함수컨텍스트](./img/함수컨텍스트.png)
         
 
 ### Scope Chain(SC)
@@ -102,7 +102,7 @@
 - 일종의 리스트로, 해당 전역 또는 함수가 참조할 수 있는 변수객체(전역객체 또는 활성객체)를 가리킨다
 - 현재 실행 컨텍스트의 활성 객체를 선두로 해, 상위 컨텍스트의 활성 객체를 가리키며 마지막 리스트는 전역 객체를 가리킨다
     
-    ![스코프체인.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aa9a4499-3691-49ce-8ca1-c218d92bf976/스코프체인.png)
+    ![스코프체인](./img/스코프체인.png)
     
 - 함수가 중첩되어 있으면, 중첩될 때마다 부모 함수의 Scope가 자식 함수의 스코프 체인에 포함된다
 - 함수 실행 중에 변수를 만나면, 그 변수를 우선 현재 Scope인 AO에서 검색해보고, 값이 없다면 스코프 체인에 담겨진 순서대로 그 검색을 이어간다
