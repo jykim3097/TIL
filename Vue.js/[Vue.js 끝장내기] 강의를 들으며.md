@@ -473,3 +473,172 @@ new Vue({
     - 이 목록에는 프로젝트에 구성될 수 있는 기능들을 나열한다
 
 ## Vue 프로젝트 구조 설명 및 ESLint 에러 확인
+21.01.06
+
+- 생성한 vue-til 폴더로 이동한 후 (cd vue-til)
+- npm run serve를 실행 → 크롬에 localhost:8080을 입력하면 서버가 실행된다
+- 이후 App.vue 폴더에서 코드 작성
+- defalut에 created() 함수를 추가하고 저장하면 ESLint 에러가 발생한다
+
+## ESLint 에러가 화면에 표시되지 않게 하는 방법
+
+```jsx
+export default {
+  name: "App",
+  components: {
+    HelloWorld,
+  },
+  created() {
+    var a = 10;
+  }
+};
+```
+
+- a가 선언되었으나 사용되지 않았다는 에러가 발생한 것
+- ESLint는 에러가 나지 않게 도와주는 도구
+- 이 에러를 무시하는 방법을 설정한다
+- vue.config.js 라는 파일을 만들고 아래 내용을 작성한다
+
+```jsx
+module.exports = {
+    devServer: {
+        overlay : false
+    }
+}
+```
+
+- 화면에서 에러를 덮어 쓰는 기능을 해제하는 코드 - overlay 속성을 껐구나 라고 인식하면 될 듯
+
+## ESLint 설정 파일 안내
+
+### .eslintrc.js
+
+- js에서 에러가 날 수 있는 가능성을 제거하는 문법 검사기 (보조 도구)
+
+```jsx
+rules: {
+    "no-console" : process.env.NODE_ENV === "production" ? "warn" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+  }
+```
+
+- 개발 모드일 때 로그가 있으면 에러를 출력하고,
+- 일반 프로토타입 모드 일 때는 off로 설정
+- 설정 파일을 변경하면 서버를 재실행해야 한다
+
+## Prettier 소개 및 ESLint와 같이 사용해야 하는 이유
+
+- Prettier  : 코드 정리 도구
+- 협업 시 코드 작성 기준을 정할 수 있다는 장점이 있다
+- [https://prettier.io/docs/en/options.html](https://prettier.io/docs/en/options.html)
+- .eslintrc.js 에서 프리티어를 설정해야 하는데, 그 이유는
+- eslintrc의 rules와 충돌이 나기 때문에 따로 작성하면 안되고 eslintrc를 먼저 설정해줘야 한다
+
+```jsx
+rules: {
+    "no-console" : "off",
+    "prettier" : {
+      printWidth : 80
+    }
+  }
+```
+
+- 이렇게 작성하면, prettier로 정리를 하면서 ESLint 에러도 잡는 효과를 볼 수 있다.
+- VSCode에서 ESLint와 Prettier 플러그인을 install하면 기준에 맞지 않는 코드에 빨간 밑줄이 뜨고, 저장 시에 자동 수정된다
+- settings.json에 아래 코드를 추가한다
+
+```jsx
+{
+    "workbench.colorTheme": "Night Owl",
+    "eslint.validate": [
+        {
+            "language": "vue",
+            "autoFix": true
+        },
+        {
+            "language": "javascript",
+            "autoFix": true
+        },
+        {
+            "language": "javascriptreact",
+            "autoFix": true
+        },
+        {
+            "language": "typescript",
+            "autoFix": true
+        },
+        {
+            "language": "typescriptreact",
+            "autoFix": true
+        }
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "eslint.workingDirectories": [
+        {
+            "mode": "auto"
+        }
+    ],
+}
+```
+
+# 라우터 & 컴포넌트 설계
+
+22.01.10
+
+## 깃헙 리포지토리 안내 및 클론
+
+- vue-til 레퍼지토리를 클론해와서 1_setup 브랜치로 체크아웃 하고 설치한다
+    
+    ```
+    git clone https://github.com/joshua1988/vue-til.git
+    git checkout 1_setup
+    npm i
+    ```
+    
+
+## 뷰 라우터 설치 및 연결
+
+- 설치하는 동안 src 폴더 아래 routes/index.js 를 추가한다
+- 설치가 완료되면 아래 코드를 추가한다
+    
+    ```jsx
+    import Vue from 'vue';
+    import VueRouter from 'vue-router';
+    
+    Vue.use(VueRouter);
+    
+    export default new VueRouter();
+    ```
+    
+- export를 쓰면 다른 js 파일에서 해당 파일을 import 할 수 있다.
+
+## 페이지 컴포넌트 생성 및 연결
+
+```jsx
+import LoginPage from '@/views/LoginPage.vue';
+import SignupPage from '@/views/SignupPage.vue';
+
+Vue.use(VueRouter);
+
+export default new VueRouter({
+  //라우팅 정보를 담는 배열
+  routes: [
+    {
+      path: '/login',
+      component: LoginPage,
+    },
+    {
+      path: '/signup',
+      component: SignupPage,
+    },
+  ],
+});
+```
+
+- SignupPage.vue, LoginPage.vue 를 만들고 컴포넌트로 연결한다
+
+## 라우팅 동작 확인
+
+- 컴포넌트로 연결한 페이지를 코드 스플릿팅(?)으로 연결할 것	
